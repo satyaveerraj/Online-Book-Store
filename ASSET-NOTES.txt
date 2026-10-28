@@ -1,2 +1,0 @@
-bookstore-logo.png and Book1–Book4 images are crops from the supplied PDF's visible output screenshots.
-background.svg, box-background.svg and pattern.svg are local replacement backgrounds because the original referenced JPGs were not included as separate files in the PDF.
