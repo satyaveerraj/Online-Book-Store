@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ECE Books</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="store.js" defer></script>
+</head>
+
+<body>
+
+    <div class="page-wrap">
+
+        <h2 class="page-title">ECE Department Books</h2>
+
+        <table class="catalogue">
+
+            <tr>
+                <th>Department</th>
+                <th>Cover Page</th>
+                <th>Book Details</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>ECE</td>
+
+                <td>
+                    <img
+                        class="cover"
+                        src="assets/Book2-Computer-Science.png"
+                        alt="Textbook of Computer Science cover"
+                    >
+                </td>
+
+                <td class="book-info">
+                    <strong>Book:</strong> Textbook of Computer Science<br>
+                    <strong>Author:</strong> Seema Bhatnagar<br>
+                    <strong>Publication:</strong> S. Chand
+                </td>
+
+                <td>Rs. 700/-</td>
+
+                <td class="center">
+                    <button onclick="addToCart('Textbook of Computer Science','Seema Bhatnagar','S. Chand',700,'assets/Book2-Computer-Science.png')">
+                        Add to Cart
+                    </button>
+                </td>
+            </tr>
+
+        </table>
+
+        <p class="center">
+            <a href="catalogue.html">View full catalogue</a> |
+            <a href="cart.html">Open cart</a>
+        </p>
+
+    </div>
+
+</body>
+
+</html>

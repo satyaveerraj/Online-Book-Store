@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Online Book Store - Cart</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="store.js" defer></script>
+    </head>
+<body>
+    <div class="page-wrap">
+        <h2 class="page-title">Shopping Cart</h2>
+<table class="cart-table">
+    <thead>
+        <tr>
+            <th>Book name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="cartRows"></tbody>
+<tfoot>
+    <tr>
+        <td colspan="4" class="total">Total amount</td>
+        <td id="cartTotal">$0.00</td>
+    </tr>
+</tfoot>
+</table>
+<div class="center">
+    <button type="button" onclick="clearCart()">Clear Cart</button>
+     <button type="button" onclick="checkout()">Checkout</button>
+    </div>
+<p id="checkoutMessage" class="center"></p>
+</div>
+<script>function checkout(){const cart=getCart();const msg=document.getElementById('checkoutMessage');if(!cart.length){msg.textContent='Your cart is empty.';return;}msg.textContent='Demo checkout complete — no real payment was taken.';clearCart();}</script>
+<script>renderCart();</script>
+</body>
+</html>
