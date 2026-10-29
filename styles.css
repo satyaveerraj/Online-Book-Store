@@ -1,0 +1,244 @@
+:root { --orange:#f4b183; --pale:#f1eb9c; --border:#555; --paper:#fff; --ink:#111; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:"Times New Roman",serif; color:var(--ink); background:#fff; }
+a { color:#00e; }
+a:visited { color:#551a8b; }
+a:hover { color:#d00; }
+a:active { color:#f60; }
+table { border-collapse:collapse; }
+.site-header { width:100%; border-collapse:collapse; background:var(--orange); }
+.site-header td,.site-header th { border:1px solid #555; padding:8px; text-align:center; }
+.site-logo { width:20%; height:116px; }
+.site-logo img { display:block; width:180px; max-width:100%; max-height:95px; object-fit:contain; margin:auto; }
+.site-name { font-size:30px; font-weight:bold; }
+.site-nav { background:var(--pale); }
+.site-nav a { display:block; padding:7px 3px; font-weight:bold; font-size:18px; }
+.page-title { text-align:center; margin:24px 0 18px; }
+.center { text-align:center; }
+.page-wrap { padding:14px 18px; }
+.department-panel { background:#ffffcc; min-height:100vh; padding:14px; border-right:2px solid #777; }
+.department-panel h2 { margin:8px 0 20px; }
+.department-panel a { display:block; margin:17px 0; font-size:19px; }
+.catalogue { width:100%; margin:0 auto; }
+.catalogue th,.catalogue td { border:1px solid #555; padding:9px; vertical-align:middle; }
+.catalogue th { background:var(--orange); }
+.cover { width:95px; height:140px; object-fit:contain; display:block; margin:auto; }
+.book-info { line-height:1.45; }
+.price { white-space:nowrap; }
+button,.button { cursor:pointer; font-family:inherit; font-size:15px; padding:6px 12px; border:1px solid #888; border-radius:3px; background:linear-gradient(#fff6a5,#ffbe27); color:#111; }
+button:hover,.button:hover { filter:brightness(.95); }
+.form-card { width:min(560px,95%); margin:25px auto; }
+.form-card label { display:inline-block; min-width:115px; margin:8px 0; }
+.form-card input,.form-card select,.form-card textarea { padding:6px; border:1px solid #999; }
+.form-card input[type="text"],.form-card input[type="password"],.form-card input[type="email"],.form-card input[type="tel"],.form-card input[type="date"] { width:min(280px,95%); }
+.message { min-height:1.3em; color:#a00; font-weight:bold; }
+.cart-table { width:95%; margin:20px auto; }
+.cart-table th,.cart-table td { border:1px solid #555; padding:9px; }
+.cart-table th { background:var(--orange); }
+.total { text-align:right; font-weight:bold; }
+.home-copy { text-align:center; margin:38px 15px; }
+.small-note { color:#555; font-size:14px; }
+@media(max-width:650px) {
+ .site-name { font-size:21px; }
+ .site-logo { height:90px; }
+ .site-logo img { max-height:70px; }
+ .site-nav a { font-size:14px; }
+ .catalogue th,.catalogue td { padding:4px; font-size:13px; }
+ .cover { width:60px; height:95px; }
+}
+
+/* ===== MODERN BOOK STORE UI ===== */
+
+:root {
+  --primary: #6c4cff;
+  --primary-dark: #5234df;
+  --text: #20243a;
+  --muted: #747b91;
+  --surface: #ffffff;
+  --page-bg: #f5f6fc;
+  --border: #e8eaf3;
+  --success: #15966b;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: var(--page-bg);
+}
+
+/* Main content spacing */
+main,
+.catalogue-container,
+.cart-container {
+  max-width: 1150px;
+  margin: 28px auto;
+  padding: 24px;
+}
+
+/* Headings */
+h1, h2 {
+  color: var(--text);
+  font-weight: 750;
+  letter-spacing: -0.6px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 23px;
+}
+
+/* Book cards — works with common card classes */
+.book-card,
+.book,
+.product-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  margin: 14px;
+  box-shadow: 0 5px 20px rgba(39, 35, 90, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.book-card:hover,
+.book:hover,
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(76, 60, 160, 0.12);
+}
+
+/* Book images */
+.book-card img,
+.book img,
+.product-card img {
+  max-width: 150px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 16px;
+  border-radius: 8px;
+}
+
+/* Price */
+.price {
+  color: var(--primary);
+  font-size: 21px;
+  font-weight: 750;
+}
+
+/* Attractive buttons */
+button,
+.btn,
+input[type="submit"] {
+  background: linear-gradient(135deg, #7657ff, #5638df);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 19px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(108, 76, 255, 0.25);
+}
+
+/* Cart table */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(39, 35, 90, 0.05);
+}
+
+th {
+  background: #efedff;
+  color: #4935b7;
+  text-align: left;
+  padding: 16px;
+  font-size: 13px;
+}
+
+td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #faf9ff;
+}
+
+/* Form fields */
+input:not([type="submit"]):not([type="checkbox"]),
+select,
+textarea {
+  border: 1px solid #dfe2ee;
+  border-radius: 10px;
+  padding: 12px 14px;
+  outline: none;
+  background: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(108, 76, 255, 0.12);
+}
+
+/* Cart total */
+#cartTotal {
+  color: var(--primary-dark);
+  font-size: 23px;
+  font-weight: 800;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  main,
+  .catalogue-container,
+  .cart-container {
+    margin: 12px auto;
+    padding: 12px;
+  }
+
+  .book-card,
+  .book,
+  .product-card {
+    margin: 8px 0;
+    padding: 16px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  th, td {
+    padding: 10px 8px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EEE Books</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="store.js" defer></script>
+</head>
+
+<body>
+
+    <div class="page-wrap">
+
+        <h2 class="page-title">EEE Department Books</h2>
+
+        <table class="catalogue">
+
+            <tr>
+                <th>Department</th>
+                <th>Cover Page</th>
+                <th>Book Details</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>EEE</td>
+
+                <td>
+                    <img
+                        class="cover"
+                        src="Book3-Artificial-Intelligence.png"
+                        alt="Artificial Intelligence cover"
+                    >
+                </td>
+
+                <td class="book-info">
+                    <strong>Book:</strong> Artificial Intelligence<br>
+                    <strong>Author:</strong> P. Krishna Shankar, S. Nithyananthan<br>
+                    <strong>Publication:</strong> Princeton Hall
+                </td>
+
+                <td>Rs. 1200/-</td>
+
+                <td class="center">
+                    <button onclick="addToCart('Artificial Intelligence','P. Krishna Shankar, S. Nithyananthan','Princeton Hall',1200,'assets/Book3-Artificial-Intelligence.png')">
+                        Add to Cart
+                    </button>
+                </td>
+            </tr>
+
+        </table>
+
+        <p class="center">
+            <a href="catalogue.html">View full catalogue</a> |
+            <a href="cart.html">Open cart</a>
+        </p>
+
+    </div>
+
+</body>
+
+</html>

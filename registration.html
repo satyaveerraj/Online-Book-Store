@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="page-wrap">
+
+        <h2 class="page-title">Registration Form</h2>
+
+        <form class="form-card" id="registrationForm">
+
+            <p>
+                <label for="name">Name:</label>
+
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Full name"
+                    required
+                    pattern="[A-Za-z ]{3,}"
+                    title="Use at least 3 letters"
+                >
+            </p>
+
+            <p>
+                <label for="regPassword">Password:</label>
+
+                <input
+                    id="regPassword"
+                    name="password"
+                    type="password"
+                    required
+                    minlength="6"
+                    placeholder="Minimum 6 characters"
+                >
+            </p>
+
+            <p>
+                <label for="email">E-mail ID:</label>
+
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="name@example.com"
+                >
+            </p>
+
+            <p>
+                <label for="phone">Phone Number:</label>
+
+                <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    placeholder="10 digit number"
+                >
+            </p>
+
+            <p>
+                <label>Sex:</label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="sex"
+                        value="Male"
+                        required
+                    >
+                    Male
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="sex"
+                        value="Female"
+                    >
+                    Female
+                </label>
+            </p>
+
+            <p>
+                <label for="dob">Date of Birth:</label>
+
+                <input
+                    id="dob"
+                    type="date"
+                    required
+                >
+            </p>
+
+            <p>
+                <label>Languages Known:</label>
+
+                <label>
+                    <input type="checkbox" value="English">
+                    English
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Hindi">
+                    Hindi
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Other">
+                    Other
+                </label>
+            </p>
+
+            <p>
+                <label for="address">Address:</label>
+
+                <textarea
+                    id="address"
+                    rows="3"
+                    cols="30"
+                    required
+                ></textarea>
+            </p>
+
+            <p class="center">
+                <button type="submit">Register</button>
+
+                <button type="reset">Reset</button>
+            </p>
+
+            <p
+                id="regMessage"
+                class="message center"
+                aria-live="polite"
+            ></p>
+
+        </form>
+
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', e => {
+            e.preventDefault();
+
+            document.getElementById('regMessage').textContent =
+                'Registration form validated successfully (demo only).';
+        });
+
+        document.getElementById('registrationForm').addEventListener('reset', () =>
+            document.getElementById('regMessage').textContent = ''
+        );
+    </script>
+
+</body>
+
+</html>
